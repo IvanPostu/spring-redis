@@ -18,6 +18,9 @@
     <Logger name="com.ivan.webapp.configurations.CustomContextLoaderListener" level="info" additivity="true">
     </Logger>
 
+    <Logger name="com.ivan.webapp.redis" level="debug" additivity="true">
+    </Logger>
+
     <Logger name="com.ivan.webapp.controllers" level="debug" additivity="true">
     </Logger>
 

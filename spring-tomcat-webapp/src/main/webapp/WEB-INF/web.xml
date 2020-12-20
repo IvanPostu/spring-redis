@@ -49,10 +49,11 @@
 
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>  
+    <param-value>
       /WEB-INF/dispatcher-servlet.xml
-      /WEB-INF/thymeleaf.xml   
-      /WEB-INF/context.xml   
+      /WEB-INF/thymeleaf.xml
+      /WEB-INF/services.xml
+      /WEB-INF/context.xml
     </param-value>
   </context-param>
 
