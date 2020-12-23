@@ -11,9 +11,7 @@
 		http://www.springframework.org/schema/tx https://www.springframework.org/schema/tx/spring-tx.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     
-  <bean id="loggerConfig" class="com.ivan.webapp.configurations.LoggerConfig" />
-  <bean id="redisConfiguration"  class="com.ivan.webapp.configurations.RedisConfiguration" />
-  <!-- <bean id="customSender"  class="com.ivan.webapp.redis.receiver.CustomSender" /> -->
-  <!-- <context:property-placeholder location="classpath:global.properties" /> -->
-  <!-- <context:component-scan base-package="com.ivan.webapp" /> -->
+
+  <bean id="socketHandler"  class="com.ivan.webapp.sockets.SocketHandler" />
+
 </beans>

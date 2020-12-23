@@ -12,6 +12,9 @@
   
   <Loggers>
 
+    <Logger name="com.ivan.webapp.sockets" level="info" additivity="true" />
+
+
     <Logger name="com.ivan.webapp.Main" level="info" additivity="true">
     </Logger>
 
@@ -21,7 +24,7 @@
     <Logger name="com.ivan.webapp.redis" level="debug" additivity="true">
     </Logger>
 
-    <Logger name="com.ivan.webapp.controllers" level="debug" additivity="true">
+    <Logger name="com.ivan.webapp.controllers" level="info" additivity="true">
     </Logger>
 
     <Root level="warn" additivity="false">

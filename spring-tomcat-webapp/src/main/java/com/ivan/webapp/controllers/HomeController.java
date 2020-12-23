@@ -22,13 +22,13 @@ public class HomeController {
   @RequestMapping(method = RequestMethod.GET, value = "/home")
   public ModelAndView home(){
 
-
+    logger.debug("aaa");
     User u = new User();
     u.setFullName("Vasia Green");
     u.setId("22"); 
     // redis.opsForList().rightPushAll(u.getId(),Arrays.asList(u));
 
-    customSender.sendDataToRedisQueue("channel1", u);
+    // customSender.sendDataToRedisQueue("channel1", u);
 
     
     return new ModelAndView("home/home");

@@ -19,7 +19,4 @@ public class CustomContextLoaderListener extends ContextLoaderListener {
     super.contextInitialized(event);
     logger.info(String.format("Context has been initialized. "));
   }
-  
-
-
 }

@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home page</title>
 </head>
+
 <body>
   <h1>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aspernatur consequatur.</h1>
+
+  <button onclick="sendName()">Send</button>
+  <button onclick="connect()">Connect</button>
+  <button onclick="disconnect()">Disconnect</button>
+
+  <script>
+    var ws
+
+    function connect() {
+      ws = new WebSocket('ws://127.0.0.1:8080/webapp/name');
+      ws.onmessage = function (data) {
+        showGreeting(data.data);
+      }
+
+      ws.onclose = function() {
+        console.log('Web Socket Connection Closed');
+      };
+
+      console.log("Connected");
+    }
+
+    function disconnect() {
+      if (ws != null) {
+        ws.close();
+        console.log("Socket Disconnected");
+      }else{
+        console.log("Socket already Disconnected");
+      }
+    }
+
+    function sendName() {
+      ws.send('aaa1');
+    }
+
+    function showGreeting(message) {
+      console.log(message)
+    }
+
+
+  </script>
+
 </body>
+
 </html>

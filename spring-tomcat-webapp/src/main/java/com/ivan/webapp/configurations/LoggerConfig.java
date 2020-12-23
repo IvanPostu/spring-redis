@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 @Profile({"production", "development"})
 public class LoggerConfig {
-  private static final Logger logger = LoggerFactory.getLogger(MyWebInitializer.class);
+  private static final Logger logger = LoggerFactory.getLogger(LoggerConfig.class);
   
   @Value("${spring.profiles.active}")
   private String activeProfile;
